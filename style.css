@@ -1,0 +1,112 @@
+:root{
+    --black: #070707;
+    --white: #EFEFEF;
+    --pink: #D30C7B;
+    --purple: #9A4C95;
+}
+body {
+    color: var(--pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color; var(--pink);
+    font-size: 2rem;
+}
+button {
+    background: none;
+    border: 0;
+    transition: var(--purple);
+}
+button:hover {
+    cursor: pointer;
+}
+.card {
+    background-color: var(--black);
+    border-radius: 10px;
+    width: 48rem;
+    height: 42rem;
+    transition: var(--purple)
+    box-shadow: 0 1px 8px rgba(0,0,0,.5);
+}
+.card:hover {
+    box-shadow: 0 3px 24px rgba(0,0,0,.25);
+}
+header {
+    position: relative;
+}
+header > img {
+    border-radius: 7px 7px 0 0;
+}
+header > button {
+    background-color: rgba(0,0,0,.2);
+    font-size: 100px;
+    color: var(--white);
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    clip-path:circle();
+}
+header > button:hover {
+    background-color: rgba(0,0,0,.4);
+}
+header .material-symbols-outlined {
+    font-size: 8rem;
+    font-variation-settings: 'wght' 300;
+}
+footer {
+    padding: 0 1.5rem;
+    display: flex;
+    height: 13rem;
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--white);
+}
+footer button {
+    color: var(--purple);
+}
+footer button:hover {
+    color: var(--purple);
+}
+footer .material-symbols-outlined {
+    font-size: 5rem;
+    font-variation-settings: 'wght' 200;
+}
+.actions > :last-child {
+    margin-left: auto;
+}
+.stats, .tags {
+    margin: 0 1rem;
+}
+.stats {
+    color: var(--pink);
+}
+.stats > span:not(:first-of-type), .tags > span:not(:first-of-type) {
+    display: inline-block;
+    margin: auto .5em;
+}
+.likes {
+    color: greenyellow;
+}
+.rating {
+    padding: .o5rem 1rem .1rem 1rem;
+    font-size: .65em;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+}
+.quality {
+    padding: .05rem 1rem ,1rem 1rem;
+    font-size: .65em;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+}
+.tags {
+    font-size: .9em;
+}
+.tags <span:not(:last-of-type):after {
+    content: "/2022";
+    color: var(--pink)
+    padding-left: 2rem;
+}
