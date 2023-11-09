@@ -2,6 +2,7 @@
     --black: #070707;
     --white: #EFEFEF;
     --pink: #D30C7B;
+    --ltpink: #ff6ebe;
     --purple: #9A4C95;
 }
 body {
@@ -10,23 +11,23 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color; var(--pink);
+    background-color: var(--pink);
     font-size: 2rem;
 }
 button {
     background: none;
     border: 0;
-    transition: var(--purple);
+    transition: var(--pink);
 }
 button:hover {
     cursor: pointer;
 }
 .card {
-    background-color: var(--black);
+    background-color: var(--ltpink);
     border-radius: 10px;
-    width: 48rem;
-    height: 42rem;
-    transition: var(--purple)
+    width: 60rem;
+    height: max-content;
+    transition: var(--purple);
     box-shadow: 0 1px 8px rgba(0,0,0,.5);
 }
 .card:hover {
@@ -35,9 +36,18 @@ button:hover {
 header {
     position: relative;
 }
-header > img {
+header > div > img {
     border-radius: 7px 7px 0 0;
+    min-width: 60rem;
+    min-height: calc(60rem/16*9);
 }
+
+header > div.image {
+    min-width: 60rem;
+    min-height: calc(60rem/16*9);
+    overflow: hidden;
+}
+
 header > button {
     background-color: rgba(0,0,0,.2);
     font-size: 100px;
@@ -62,13 +72,13 @@ footer {
     height: 13rem;
     flex-direction: column;
     justify-content: space-around;
-    color: var(--white);
+    color: var(--pink);
 }
 footer button {
-    color: var(--purple);
+    color: var(--pink);
 }
 footer button:hover {
-    color: var(--purple);
+    color: var(--white);
 }
 footer .material-symbols-outlined {
     font-size: 5rem;
@@ -87,11 +97,14 @@ footer .material-symbols-outlined {
     display: inline-block;
     margin: auto .5em;
 }
+.time {
+    color: var(--white);
+}
 .likes {
-    color: greenyellow;
+    color:deeppink;
 }
 .rating {
-    padding: .o5rem 1rem .1rem 1rem;
+    padding: .5rem 1rem .1rem 1rem;
     font-size: .65em;
     border: 1px solid var(--white);
     border-radius: 4px;
@@ -105,8 +118,7 @@ footer .material-symbols-outlined {
 .tags {
     font-size: .9em;
 }
-.tags <span:not(:last-of-type):after {
-    content: "/2022";
-    color: var(--pink)
+.stats span:last-of-type {
+    color: var(--white);
     padding-left: 2rem;
 }
